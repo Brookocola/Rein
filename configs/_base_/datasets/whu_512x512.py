@@ -1,5 +1,5 @@
 whu_type = "WHUDataset"
-whu_root = "data/whu/"
+whu_root = "E:/xienan/project/Rein-train/data/whu/"
 whu_crop_size = (512, 512)
 whu_train_pipeline = [
     dict(type="LoadImageFromFile"),

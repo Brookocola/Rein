@@ -1,6 +1,6 @@
 # dataset config
 _base_ = [
-    "../_base_/datasets/dg_gta_512x512.py",
+    "../_base_/datasets/dg_whu_512x512.py",
     "../_base_/default_runtime.py",
     "../_base_/models/sam-vit-h_mask2former.py",
 ]

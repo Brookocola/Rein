@@ -1,5 +1,5 @@
 mapillary_type = "CityscapesDataset"
-mapillary_root = "data/mapillary/"
+mapillary_root = "E:/xienan/project/Rein-train/data/mapillary/"
 mapillary_crop_size = (512, 512)
 mapillary_train_pipeline = [
     dict(type="LoadImageFromFile"),

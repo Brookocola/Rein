@@ -1,5 +1,5 @@
 cityscapes_type = "CityscapesDataset"
-cityscapes_root = "data/cityscapes/"
+cityscapes_root = "E:/xienan/project/Rein-train/data/cityscapes/"
 cityscapes_crop_size = (512, 512)
 cityscapes_train_pipeline = [
     dict(type="LoadImageFromFile"),

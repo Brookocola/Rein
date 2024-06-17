@@ -1,5 +1,5 @@
 bdd_type = "CityscapesDataset"
-bdd_root = "data/bdd100k/"
+bdd_root = "E:/xienan/project/Rein-train/data/bdd100k/"
 bdd_crop_size = (512, 512)
 bdd_train_pipeline = [
     dict(type="LoadImageFromFile"),
