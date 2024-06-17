@@ -26,7 +26,7 @@ def parse_args():
             "into the directory as json"
         ),
     )
-    parser.add_argument(
+    parser.add_argument( #mask保存地址
         "--out",
         type=str,
         help="The directory to save output prediction for offline evaluation",
