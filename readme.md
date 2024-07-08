@@ -49,11 +49,13 @@ Trained on Cityscapes, Rein generalizes to unseen driving scenes and cities: Nig
 ## Citation
 If you find our code or data helpful, please cite our paper:
 ```bibtex
-@article{wei2023stronger,
-  title={Stronger, Fewer, \& Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation},
-  author={Wei, Zhixiang and Chen, Lin and Jin, Yi and Ma, Xiaoxiao and Liu, Tianle and Ling, Pengyang and Wang, Ben and Chen, Huaian and Zheng, Jinjin},
-  journal={arXiv preprint arXiv:2312.04265},
-  year={2023}
+@InProceedings{Wei_2024_CVPR,
+    author    = {Wei, Zhixiang and Chen, Lin and Jin, Yi and Ma, Xiaoxiao and Liu, Tianle and Ling, Pengyang and Wang, Ben and Chen, Huaian and Zheng, Jinjin},
+    title     = {Stronger Fewer \& Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {28619-28630}
 }
 ```
 
@@ -179,6 +181,12 @@ python tools/train.py configs/dinov2/rein_dinov2_mask2former_512x512_bs1x4.py
 Start training in multiple GPU:
 ```
 PORT=12345 CUDA_VISIBLE_DEVICES=1,2,3,4 bash tools/dist_train.sh configs/dinov2/rein_dinov2_mask2former_1024x1024_bs4x2.py NUM_GPUS
+```
+
+## Generate full weights
+Because we only fine-tune and save the REIN and head weights, if you need a complete set of segmentor weights, you need to use this script:
+```
+python generate_full_weights.py --segmentor_save_path SEGMENTOR_SAVE_PATH --backbone CONVERTED_BACKBONE --rein_head REIN_HEAD
 ```
 ## FAQs
 * [Detailed instruction for mmsegmentation.](https://mmsegmentation.readthedocs.io/en/latest/)
